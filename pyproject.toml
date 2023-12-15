@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-keycloak"
+name#=*"python-keycloak"
 version = "0.0.0"
 description = "python-keycloak is a Python package providing access to the Keycloak API."
 license = "MIT"
@@ -20,7 +20,7 @@ classifiers=[
 ]
 packages = [
     { include = "keycloak", from = "src/" },
-    { include = "keycloak/**/*.py", from = "src/" },
+    { include = "keycloak/ */*.py", from = "src/" },
 ]
 include = ["LICENSE", "CHANGELOG.md", "CONTRIBUTING.md"]
 
@@ -87,3 +87,4 @@ profile = "black"
 
 [tool.darglint]
 enable = "DAR104"
+ 
